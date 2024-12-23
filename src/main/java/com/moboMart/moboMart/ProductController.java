@@ -2,6 +2,8 @@ package com.moboMart.moboMart;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +19,9 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts(){
-        return new ResponseEntity<List<Product>>(productService.allProducts(), HttpStatus.OK);
+    public ResponseEntity<Page<Product>> getAllProducts(@RequestParam(defaultValue = "0") int page,
+                                                        @RequestParam(defaultValue = "10") int size) {
+        return new ResponseEntity<>(productService.allProducts(PageRequest.of(page, size)), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

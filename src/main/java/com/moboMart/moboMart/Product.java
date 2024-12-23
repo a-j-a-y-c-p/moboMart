@@ -101,5 +101,7 @@ public class Product {
     @Field(value = "Weight")
     private String weight;
 
+    @Field(value= "ImgUrl")
+    private String imgUrl;
 
 }
