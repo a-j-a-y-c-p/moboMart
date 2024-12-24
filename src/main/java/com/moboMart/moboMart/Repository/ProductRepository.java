@@ -1,5 +1,6 @@
-package com.moboMart.moboMart;
+package com.moboMart.moboMart.Repository;
 
+import com.moboMart.moboMart.Models.Product;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

@@ -5,6 +5,8 @@ import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Details from "./pages/Details";
+import Login from "./pages/Login";
+import Signup from './pages/Signup';
 
 function App() {
 
@@ -34,6 +36,8 @@ function App() {
         <Route path="/" element={<Layout/>}>
         <Route path="/" element={<Home products={products}/>} />
         <Route path="/product/:id" element={<Details/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
 
         </Route>
       </Routes>

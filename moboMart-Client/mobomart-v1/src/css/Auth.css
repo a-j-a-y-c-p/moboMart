@@ -1,0 +1,114 @@
+/* src/css/Auth.css */
+
+/* General Styles for Auth Pages */
+.auth-container {
+    display: flex;
+    justify-content: flex-start;  /* Align items to the top */
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Light background for the auth pages */
+    padding: 20px;
+    flex-direction: column; /* Align children vertically */
+    padding-top: 50px; /* Add some top padding for spacing */
+  }
+  
+  .auth-form {
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Maximum width of the form */
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    color: #333; /* Dark color for heading */
+    margin-bottom: 20px;
+  }
+  
+  .auth-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .auth-form label {
+    display: block;
+    color: #333; /* Label text color */
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .auth-form input:focus {
+    border-color: #333; /* Highlight border on input focus */
+  }
+  
+  .auth-form .auth-button {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-form .auth-button:hover {
+    background-color: #555; /* Darker background on hover */
+  }
+  
+  .auth-form .auth-button:disabled {
+    background-color: #ccc; /* Disabled button state */
+    cursor: not-allowed;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Styles for Link between Login/Signup */
+  .auth-form .switch-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .auth-form .switch-link a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .auth-form .switch-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design for Auth Pages */
+  @media (max-width: 768px) {
+    .auth-form {
+      padding: 20px;
+    }
+  
+    .auth-form input {
+      padding: 8px; /* Slightly smaller padding on mobile */
+    }
+  
+    .auth-form .auth-button {
+      padding: 12px;
+    }
+  }
+  
