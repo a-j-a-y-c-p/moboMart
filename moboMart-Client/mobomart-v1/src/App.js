@@ -5,6 +5,10 @@ import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Details from "./pages/Details";
+import OldSmartphone from './pages/OldSmartphone';
+import SellPhoneForm from './components/SellPhoneForm';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
 
@@ -14,9 +18,6 @@ function App() {
 
     try{
       const response = await api.get("/api/v1/products");
-
-      console.log(response.data);
-
       setProducts(response.data);
     }
     catch(err){
@@ -34,6 +35,13 @@ function App() {
         <Route path="/" element={<Layout/>}>
         <Route path="/" element={<Home products={products}/>} />
         <Route path="/product/:id" element={<Details/>} />
+        <Route path="/old-smartphone" element={<OldSmartphone/>} />
+        {/* <Route path="/new-smartphone" element={<NewSmartphone/>} /> */}
+        <Route path="/sell-phone" element={<SellPhoneForm/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+
+
 
         </Route>
       </Routes>
