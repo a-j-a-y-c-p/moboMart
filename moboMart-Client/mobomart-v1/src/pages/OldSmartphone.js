@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from '../api/axiosConfig';
 import { Link } from 'react-router-dom';
 import '../css/OldSmartphone.css';
+import logo from "../assets/android-chrome-192x192.png";
+
 
 const OldSmartphone = () => {
         const [products, setProducts] = useState([]);
@@ -11,7 +13,7 @@ const OldSmartphone = () => {
         useEffect(() => {
             const fetchProducts = async () => {
                 try {
-                    const response = await axios.get(`/api/v1/products?page=${page}&size=10`);
+                    const response = await axios.get(`/api/v1/old-products?page=${page}&size=10`);
                     setProducts(response.data.content);
                     setTotalPages(response.data.totalPages);
                 } catch (error) {
@@ -42,12 +44,12 @@ const OldSmartphone = () => {
                     <Link to={`/product/${product.id}`} key={product.id} className="card-link">
                     <div className="card">
                         <img
-                            src={product.imgUrl}
-                            alt={product.title}
+                            src={product.image? `data:image/jpeg;base64,${product.image}` : logo} 
+                            alt={product.model}
                             className="details-image"
                         />
-                        <h3 className="card-title">{product.title}</h3>
-                        <p className="card-price">Price: rs {product.price}</p>
+                        <h3 className="card-title">{product.model}</h3>
+                        <p className="card-price">Price: rs {product.expectedPrice}</p>
                     </div>
                 </Link>
                 ))}

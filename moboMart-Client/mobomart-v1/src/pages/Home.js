@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from '../api/axiosConfig';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/Home.css';
+import logo from "../assets/android-chrome-192x192.png";
+
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -44,11 +46,12 @@ const Home = () => {
         <div className="home-container">
             <h1>{searchQuery ? `Search Results for "${searchQuery}"` : "Mobile Phones"}</h1>
             <div className="card-container">
+                
                 {products.map((product) => (
                     <Link to={`/product/${product.id}`} key={product.id} className="card-link">
                         <div className="card">
                             <img
-                                src={product.imgUrl}
+                                src={product.imgUrl ? product.imgUrl : logo}
                                 alt={product.title}
                                 className="details-image"
                             />
