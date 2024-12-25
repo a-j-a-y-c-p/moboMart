@@ -38,11 +38,18 @@ const Navbar = () => {
                 <Link to="/old-smartphone" className="navbar-link">Old Smartphone</Link>
                 <Link to="/new-smartphone" className="navbar-link">New Smartphone</Link>
             </div>
-
             {/* Always open search bar on PC */}
             <div className={`navbar-search ${searchBarOpen ? 'open' : ''}`}>
                 <input type="text" placeholder="Search..." className="navbar-search-input" />
             </div>
+            <div className="navbar-links">
+                <div className="auth-buttons">
+                    <Link to="/login" className="auth-button">Login</Link>
+                    <Link to="/signup" className="auth-button">Sign Up</Link>
+                </div>
+            </div>
+
+
 
             {/* Icons (for mobile only) */}
             <div className="navbar-icons">

@@ -14,19 +14,20 @@
 }
 
 .sell-button {
-    background-color: #007BFF;
+    background: linear-gradient(145deg, #6e7f80, #4e5d62);
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     border: none;
     border-radius: 25px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .sell-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(145deg, #4e5d62, #6e7f80);
 }
 
 .smartphones-list {
