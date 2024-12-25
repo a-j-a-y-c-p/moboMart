@@ -177,6 +177,7 @@
     flex-direction: row;
     gap: 15px; /* Add spacing between buttons */
     margin-left: auto; /* Push buttons to the far right */
+    margin-right: 10px;
   }
 
   .auth-button {

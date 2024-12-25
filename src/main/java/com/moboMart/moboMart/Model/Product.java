@@ -1,4 +1,4 @@
-package com.moboMart.moboMart;
+package com.moboMart.moboMart.Model;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

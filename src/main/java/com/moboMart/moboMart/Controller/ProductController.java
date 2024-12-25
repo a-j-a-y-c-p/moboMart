@@ -1,6 +1,7 @@
-package com.moboMart.moboMart;
+package com.moboMart.moboMart.Controller;
 
-import org.bson.types.ObjectId;
+import com.moboMart.moboMart.Model.Product;
+import com.moboMart.moboMart.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -8,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController

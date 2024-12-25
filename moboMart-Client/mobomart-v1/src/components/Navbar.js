@@ -36,7 +36,6 @@ const Navbar = () => {
             <div className="navbar-links">
                 <Link to="/" className="navbar-link">Home</Link>
                 <Link to="/old-smartphone" className="navbar-link">Old Smartphone</Link>
-                <Link to="/new-smartphone" className="navbar-link">New Smartphone</Link>
             </div>
             {/* Always open search bar on PC */}
             <div className={`navbar-search ${searchBarOpen ? 'open' : ''}`}>
@@ -67,7 +66,6 @@ const Navbar = () => {
                 <div className="sidebar-links">
                     <Link to="/" className="navbar-link" onClick={toggleSidebar}>Home</Link>
                     <Link to="/old-smartphone" className="navbar-link" onClick={toggleSidebar}>Old Smartphone</Link>
-                    <Link to="/new-smartphone" className="navbar-link" onClick={toggleSidebar}>New Smartphone</Link>
                     <div className="auth-buttons">
                         <Link to="/login" className="auth-button" onClick={toggleSidebar}>Login</Link>
                         <Link to="/signup" className="auth-button" onClick={toggleSidebar}>Sign Up</Link>
